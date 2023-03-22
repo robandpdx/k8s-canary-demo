@@ -2,12 +2,16 @@
 
 This repo is a step my step demo of [canary release on k8s using linkerd and flagger](https://linkerd.io/2.12/tasks/canary-release/).  
 
+## Prerequisutes
+1. A k8s cluster
 You can use any k8s cluster for this demo. I prefer to use a [kind cluster](https://kind.sigs.k8s.io/docs/user/quick-start/) locally.  
 ```
 kind create cluster --config kind-config.yml
 ```
+2. [linkerd cli](https://linkerd.io/2.12/getting-started/#step-1-install-the-cli)
 
-1. Run the `install.sh` script to [install the prerequisites](https://linkerd.io/2.12/tasks/canary-release/#prerequisites), and [setup the demo](https://linkerd.io/2.12/tasks/canary-release/#set-up-the-demo).
+## Setup
+1. Run the `install.sh` script to [install the prerequisites](https://linkerd.io/2.12/tasks/canary-release/#prerequisites) in k8s, and [setup the demo](https://linkerd.io/2.12/tasks/canary-release/#set-up-the-demo) in k8s.
 2. Verify that everything has started up successfully by running:
 ```
 kubectl -n test rollout status deploy podinfo
@@ -24,7 +28,8 @@ To configure a canary release that will fail and rollback, use:
 ```
 kubectl apply -f podinfo-canary-fail.yml
 ```
-5. Continue to follow this document...
+## Demo
+Continue to follow this document...  s
 https://linkerd.io/2.12/tasks/canary-release/#start-the-rollout
 
 ## Notes
