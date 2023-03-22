@@ -3,6 +3,9 @@
 This repo is a step my step demo of [canary release on k8s using linkerd and flagger](https://linkerd.io/2.12/tasks/canary-release/).  
 
 You can use any k8s cluster for this demo. I prefer to use a [kind cluster](https://kind.sigs.k8s.io/docs/user/quick-start/) locally.  
+```
+kind create cluster --config kind-config.yml
+```
 
 1. Run the `install.sh` script to [install the prerequisites](https://linkerd.io/2.12/tasks/canary-release/#prerequisites), and [setup the demo](https://linkerd.io/2.12/tasks/canary-release/#set-up-the-demo).
 2. Verify that everything has started up successfully by running:
